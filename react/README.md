@@ -40,8 +40,64 @@ function App() {
 export default App;
 ```
 При цьому відкриється вікно, в якому відобразиться додаток:
-<img src = "img/react01.jpg">
+<img src = "img/react01.jpg">  
 
+
+### Опис додатку.
+В верхній частині коду ми бачимо імпорт двох елементів: картинки та CSS-файлу.
+```js
+import logo from './logo.svg';
+import './App.css';
+```
+Тобто, якщо нам знодобляться інші картинки ми їх маємо покласти в папку із додатком та зробити їх імпорт. Так само із CSS-файлами.  
+При цьому ви можете змінити існуючий файл *App.css* для зміни стилів на існуючій сторінці (в існуючому додатку).
+
+Ми бачимо роботи функції App, яка повертає код зі певними додаваннями
+
+#### Відображення картинки 
+```js
+<img src={logo} className="App-logo" alt="logo" />
+```
+Варто звернути увагу на те, що ми підставляємо в фігурних душках назву картинки, яку ми їй дали при імпорті.
+
+
+## Додавання власних елементів.
+Ми можемо змінити файл App.js так, як нам потрібно. Наприклад, скачати нову картинку man.png, покласти її до директорії додатку, імпортувати її та вивести в додатку. Змінити CSS-файл на style.css в якому додати одну властивість:
+```css
+body{
+  background-color: rgba(200, 200, 255, 0.8);
+}
+```
+В результаті, отримаємо наступний код додатку:
+```js
+import man from './man.png';
+import './style.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={man} />
+        <p>
+         Hello! My name in <b>Man</b>. Glad to see you.
+        </p>You would take diffirent images here: &nbsp; 
+        <a
+          className="App-link"
+          href="https://www.iconfinder.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        > 
+          Iconfinder.
+        </a>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
+Який відобраєаються як:  
+<img src = "img/react02.jpg">  
 
 ```js
 import React from "react";
