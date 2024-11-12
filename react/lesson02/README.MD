@@ -15,8 +15,9 @@ class Info extends React.Component{
         );
     }
 }
-```
+
 export default Info;
+```
 
 в файлі `app.js` іпортуємо файл `info.js`:
 
@@ -24,6 +25,39 @@ export default Info;
 ```js
 import Info from "./components/info"
 ```
-в **render** ставимл
+в **render** ставимо
 
 `<Info />` в місці де необхідно вивести результат роботи відповідного компоненту.
+
+Основний файл у нас буде виглядати наступним чином:
+```js
+import man from './man.png';
+import './style.css';
+import Info from "./components/info"
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={man} />
+        <p>
+         Hello! My name in <b>Man</b>. Glad to see you.
+        </p>You would take diffirent images here: &nbsp; 
+        <a
+          className="App-link"
+          href="https://www.iconfinder.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        > 
+          Iconfinder.
+        </a>
+      </header>
+      <Info />
+
+    </div>
+  );
+}
+
+export default App;
+
+```
