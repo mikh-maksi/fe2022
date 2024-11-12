@@ -1,11 +1,47 @@
-# react
-## Установка
-1. Установить https://nodejs.org/en/
-2. npm install create-react-app -g
-3. create-react-app --version (проверяем версию)
-4. create-react-app name
+# React
+## Блок 1. Встановлення
+1. Скачайте та встановість https://nodejs.org/en/
+2. npm install create-react-app -g (встановлюємо пакет, який дозволяє створювати нові React-додатки)
+3. create-react-app --version (Перевіряємо версії)
+4. create-react-app name (Створюємо новий додаток з іменем name)
 5. cd name
 6. npm start
+
+
+В результаті виконання даних команд відкриється вікно із картинкою додатку React.js за замовченням.
+
+## Блок 2. Прості зміни в додатку.
+За замовченням, ви отримаєте додаток із наступним кодом:
+```js
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
+При цьому відкриється вікно, в якому відобразиться додаток:
+<img src = "img/react01.jpg">
+
 
 ```js
 import React from "react";
