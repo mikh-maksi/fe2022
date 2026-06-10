@@ -20,7 +20,7 @@
 
 // https://raw.githubusercontent.com/typicode/demo/master/db.json
 
-  query = 'https://raw.githubusercontent.com/typicode/demo/master/db.json';
+  query = 'https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=5';
   console.log(query);
   fetch(query).then(response => response.json())
   .then(function (quiz) {
